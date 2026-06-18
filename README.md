@@ -49,7 +49,10 @@ The repository keeps the original project structure used during the dissertation
 │   ├── figures/
 │   └── tables/
 ├── evidence/
-│   └── screenshots/
+│   ├── 01_project_folder_overview.png
+│   ├── 02_paper_outputs_folder.png
+│   ├── ...
+│   └── evidence_note.txt
 ├── config.py
 ├── subject_data.py
 ├── subject_features.py
@@ -59,10 +62,10 @@ The repository keeps the original project structure used during the dissertation
 ├── ocsvm.py
 ├── lof.py
 ├── autoencoder.py
-├── run_if_experiment.py
-├── run_ocsvm_experiment.py
-├── run_lof_experiment.py
-├── rn_autoencoder_experiments.py
+├── run_if_experiments.py
+├── run_ocsvm_experiments.py
+├── run_lof_experiments.py
+├── run_autoencoder_experiments.py
 ├── make_paper_outputs_clean_names.py
 ├── normal_logs.csv
 ├── all_logs_with_attacks.csv
@@ -194,7 +197,7 @@ if_per_intent_summary.csv
 if_vs_rules_comparison.csv
 ```
 
-### `run_if_experiment.py`
+### `run_if_experiments.py`
 
 This script runs the Isolation Forest experiment workflow. It may call functions from `isolation_forest.py` and repeat the experiment using selected random seeds.
 
@@ -225,7 +228,7 @@ ocsvm_per_intent_summary.csv
 ocsvm_vs_rules_comparison.csv
 ```
 
-### `run_ocsvm_experiment.py`
+### `run_ocsvm_experiments.py`
 
 This script runs the One-Class SVM experiment. It was used to compare OCSVM parameter settings and produce the final selected OCSVM result files.
 
@@ -261,7 +264,7 @@ lof_per_intent_summary.csv
 lof_vs_rules_comparison.csv
 ```
 
-### `run_lof_experiment.py`
+### `run_lof_experiments.py`
 
 This script runs the LOF experiment. It was used to compare LOF settings and generate the final LOF output files.
 
@@ -303,7 +306,7 @@ ae_per_intent_summary.csv
 ae_vs_rules_comparison.csv
 ```
 
-### `rn_autoencoder_experiments.py`
+### `run_autoencoder_experiments.py`
 
 This script runs the autoencoder experiment. The filename reflects the original development process. It was used to train and evaluate the simple autoencoder and generate the final autoencoder result files.
 
@@ -330,6 +333,8 @@ paper_outputs/figures/figure_04_alert_burden_comparison.png
 ### Figure 5 and Figure 6 fixing script
 
 During the final dissertation editing stage, the generated chart outputs for Figure 5 and Figure 6 required correction. The issue was related to the final presentation of chart numbering, labels, and dissertation-ready formatting. The underlying experiment results were not changed; the fix was applied to ensure the final figures matched the dissertation text and table interpretation.
+
+The final corrected versions of Figure 5 and Figure 6 are stored in paper_outputs/tables/ as fig_05_recall_alert_tradeoff_fixed.png and fig_06_per_intent_recall_fixed.png. Earlier generated versions remain in paper_outputs/figures/ as intermediate outputs.
 
 The fixing script, stored under `paper_outputs/tables/` or the project folder, was used to regenerate the corrected versions of the relevant figures.
 
@@ -450,11 +455,18 @@ Figures 3–6 were generated or updated using the experimental outputs and final
 
 ## Known issue and correction for generated figures
 
-During the final writing stage, an issue was identified with the generated Figure 5 and Figure 6 outputs. The initial generated charts did not fully match the final dissertation presentation requirements. The issue was related to chart presentation, numbering, and clarity rather than the underlying experimental results.
+Figures 1 and 2 were manually redrawn in Figma as `new_fig_01.png` and `new_fig_02.png` to present the research workflow and synthetic audit-log generation pipeline more clearly. They are based on the implemented workflow and data-generation structure.
 
-To address this, a separate fixing script was created to regenerate the corrected Figure 5 and Figure 6 versions from the existing result tables. The corrected figures were then used in the final dissertation.
+Figures 3 and 4 were generated from the experimental result tables.
 
-This correction process is included in the repository to make the final figure-generation process transparent. The corrected figures should be treated as the final dissertation versions.
+The initial generated versions of Figure 5 and Figure 6 were later corrected for dissertation presentation. The correction was related to chart presentation, numbering, and clarity, not to changes in the underlying experiment results. The corrected final versions are stored in `paper_outputs/tables/` as:
+
+- `fig_05_recall_alert_tradeoff_fixed.png`
+- `fig_06_per_intent_recall_fixed.png`
+
+The correction script is:
+
+- `paper_outputs/tables/fix_figure5_figure6.py`
 
 ## How to run the project
 
@@ -468,24 +480,37 @@ A typical workflow is:
 
 ```bash
 python run_subject_pipeline.py
-python run_if_experiment.py
-python run_ocsvm_experiment.py
-python run_lof_experiment.py
-python rn_autoencoder_experiments.py
+python run_if_experiments.py
+python run_ocsvm_experiments.py
+python run_lof_experiments.py
+python run_autoencoder_experiments.py
 python make_paper_outputs_clean_names.py
 ```
 
-If the Figure 5 and Figure 6 correction script is included, run it after generating the main paper outputs:
+The corrected Figure 5 and Figure 6 versions can be regenerated using:
 
 ```bash
-python fix_figure5_figure6.py
+python paper_outputs/tables/fix_figure5_figure6.py
 ```
 
-The exact filenames may reflect the original development process. The final dissertation outputs are stored in `paper_outputs/`.
+The final dissertation outputs are stored in paper_outputs/. The final corrected versions of Figure 5 and Figure 6 are stored in paper_outputs/tables/.
 
 ## Evidence folder
 
 The `evidence/` folder contains screenshots and notes used to support experiment transparency. These files are not required to run the code. They are included to show the project folder structure, generated synthetic CSV files, engineered feature tables, final output tables, final figures, and the local Python environment used during the dissertation experiments.
+
+The folder includes:
+
+- project folder overview screenshot
+- paper output folder screenshot
+- final tables folder screenshot
+- final figures folder screenshot
+- raw synthetic log preview
+- engineered feature table preview
+- overall test-result table preview
+- per-attack recall table preview
+- Python environment screenshot
+- `evidence_note.txt`
 
 ## Requirements
 
