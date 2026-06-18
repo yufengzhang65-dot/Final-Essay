@@ -1,0 +1,6 @@
+Model,Main configuration
+Rules baseline,Intent-specific rule scoring; alert raised when best rule score exceeds threshold.
+Isolation Forest,Normal-only training; repeated seeds; anomaly score threshold selected on validation set.
+One-Class SVM,"RBF kernel; selected configuration nu = 0.05, gamma = 0.05."
+Local Outlier Factor,Novelty detection; selected configuration n_neighbors = 15.
+Autoencoder,16 -> 8 -> 4 -> 8 -> 16 reconstruction model; normal-only training; repeated seeds.

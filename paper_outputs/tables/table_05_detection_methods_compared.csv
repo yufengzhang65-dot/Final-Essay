@@ -1,0 +1,6 @@
+Method,Type,Role in project
+Rules baseline,Transparent heuristic,Practical SME-style starting point with human-readable reasons.
+Isolation Forest,Tree-based anomaly detection,"Tests sensitivity to strong, bursty outlier behaviour."
+One-Class SVM,Boundary-based anomaly detection,Tests whether normal-boundary deviation captures subtle suspicious activity.
+Local Outlier Factor,Density-based anomaly detection,Tests sensitivity to locally unusual behaviour.
+Autoencoder,Reconstruction-based deep learning,Tests whether a simple neural comparator adds practical value.

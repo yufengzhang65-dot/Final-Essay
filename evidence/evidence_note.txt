@@ -1,0 +1,24 @@
+Experiment Evidence Notes
+
+Operating system: Windows 11
+Python version: 3.13.3
+IDE/editor: Visual Studio Code
+Main libraries: pandas, numpy, scikit-learn, matplotlib, openpyxl, tensorflow/torch
+
+Data type:
+Synthetic SME-style cloud file-access audit logs.
+
+Real data statement:
+No real enterprise tenant data, real user audit logs, confidential files, IP addresses, or organisational access patterns were used.
+
+Evidence included:
+1. Project folder screenshot
+2. Python script folder screenshot
+3. Synthetic CSV output screenshots
+4. Engineered feature table screenshot
+5. Final result table screenshots
+6. Final figure folder screenshot
+7. Python environment screenshot
+
+Purpose:
+These files are included to show that the dissertation experiments were implemented and that the reported tables and figures were generated from coding outputs.

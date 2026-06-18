@@ -1,0 +1,6 @@
+Feature group,Examples,Purpose
+Short-window activity,"events_10m, views_10m, downloads_10m, files_touched_10m",Captures bursty access behaviour and short-term activity spikes.
+Short-window modification,"edits_10m, deletes_10m, renames_10m",Captures rapid modification or tamper-like patterns.
+Long-window sharing and permissions,"shares_30m, external_shares_30m, permission_changes_30m",Captures accumulated sharing and access-control risk.
+Context features,"new_device, new_city, off_hours, is_weekend",Captures unusual operational context.
+User-relative volume,"bytes_10m, bytes_zscore",Captures high byte volume and deviation from the user's normal baseline.

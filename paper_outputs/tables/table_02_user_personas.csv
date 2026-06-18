@@ -1,0 +1,5 @@
+Persona,Normal behaviour,Why included
+Office staff,"Routine file access, edits, downloads, mostly during standard work hours.",Represents the main everyday business user baseline.
+Manager,Broader file access and more sharing behaviour than ordinary staff.,Represents higher access scope and potentially sensitive sharing contexts.
+Contractor,Narrower project-based access with more variable context.,Represents temporary or external users with less stable patterns.
+IT administrator,More permission-related and administrative actions.,Provides normal context for permission activity and privilege-misuse comparisons.

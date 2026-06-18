@@ -1,0 +1,5 @@
+Attack category,Behavioural meaning,Example signals
+Exfiltration,Data leakage or removal through access and sharing activity.,"Burst downloads, high byte volume, external/public sharing."
+Reconnaissance,Broad exploration of available files before stronger action.,"Many views, many files touched, low data volume."
+Privilege misuse,Abnormal or abusive access-control changes.,"Repeated permission changes, unusual device or context."
+Tamper-like,"Suspicious modification, deletion, or disruption of files.","Bursts of rename, edit, or delete activity."

@@ -1,0 +1,21 @@
+Model,Intent,Recall
+Rules,exfiltration,0.9464285714285714
+Rules,recon,0.6285714285714286
+Rules,privilege_misuse,0.5
+Rules,tamper_like,0.5833333333333334
+Isolation Forest,exfiltration,0.9642857142857144
+Isolation Forest,recon,0.419047619047619
+Isolation Forest,privilege_misuse,0.375
+Isolation Forest,tamper_like,0.8611111111111112
+One-Class SVM,exfiltration,0.9821428571428572
+One-Class SVM,recon,0.8571428571428571
+One-Class SVM,privilege_misuse,0.625
+One-Class SVM,tamper_like,0.8611111111111112
+Local Outlier Factor,exfiltration,1.0
+Local Outlier Factor,recon,0.8857142857142857
+Local Outlier Factor,privilege_misuse,0.625
+Local Outlier Factor,tamper_like,0.7777777777777778
+Autoencoder,exfiltration,0.9702380952380952
+Autoencoder,recon,0.8095238095238096
+Autoencoder,privilege_misuse,0.6666666666666666
+Autoencoder,tamper_like,0.9166666666666666

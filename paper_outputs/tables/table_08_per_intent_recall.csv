@@ -1,0 +1,6 @@
+Model,Exfiltration,Reconnaissance,Privilege misuse,Tamper-like
+Rules,0.946,0.629,0.5,0.583
+Isolation Forest,0.964,0.419,0.375,0.861
+One-Class SVM,0.982,0.857,0.625,0.861
+Local Outlier Factor,1.0,0.886,0.625,0.778
+Autoencoder,0.97,0.81,0.667,0.917

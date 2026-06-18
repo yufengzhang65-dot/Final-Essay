@@ -1,0 +1,6 @@
+Model,Precision,Recall,F1,PR-AUC,"Alerts per 1,000",Mean time-to-detect (s)
+Rules,0.962,0.708,0.816,0.928,23.95,79.25
+Isolation Forest,0.977,0.676,0.799,0.948,22.55,38.91
+One-Class SVM,0.994,0.876,0.931,0.972,28.7,40.25
+Local Outlier Factor,0.43,0.876,0.577,0.343,66.36,10.0
+Autoencoder,0.926,0.869,0.896,0.956,30.65,39.58

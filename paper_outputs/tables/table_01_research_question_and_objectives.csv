@@ -1,0 +1,5 @@
+Item,Content
+Research question,Which lightweight anomaly-detection approach can best reduce alert burden while maintaining strong detection coverage on cloud file-access audit logs in SME settings?
+Objective 1,Build a controlled SME-style cloud audit-log pipeline.
+Objective 2,Compare a rules-only baseline with lightweight machine-learning methods and a simple deep-learning comparator.
+Objective 3,Evaluate detection coverage together with operational alert burden.
