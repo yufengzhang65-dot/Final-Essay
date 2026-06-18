@@ -546,7 +546,7 @@ Real user audit logs used: No
 Screenshots of the project folder, output files, and experiment evidence are stored in:
 
 ```text
-evidence/screenshots/
+evidence/
 ```
 
 ## Reproducibility note
